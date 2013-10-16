@@ -1,0 +1,386 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+a img {
+  border: none;
+  outline: 0;
+}
+a {
+  outline: 0;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #121213;
+  color: #fff;
+}
+#wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-width: 980px;
+}
+#header {
+  height: 126px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+  #header h1 img {
+    margin-left: 15px;
+    margin-top: 38px;
+  }
+  #header #nav {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    overflow: hidden;
+  }
+
+    #content li { 
+      list-style-type: none;
+    }
+    #header #nav li { 
+      float: left;
+      list-style-type: none;
+    }
+    #header #nav li a {
+      text-transform: uppercase;
+      float: left;
+      padding: 56px 12px;
+      color: #fff;
+      font-size: 12px;
+      height: 14px;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+      #header #nav li a:hover {
+        color: #FEFFDE;
+      }
+      #header #nav li a.home.active {
+        background-color: #fac303;
+        margin-right: 5px;
+        padding: 56px 16px;
+      }
+      #header #nav li a.interiors.active {
+        background-color: #f36525;
+        margin: 0 5px;
+      }
+      #header #nav li a.contact.active {
+        background-color: #d80000;
+        margin-left: 5px;
+      }
+      #header #nav li a.about.active {
+        background-color: #1818a7;
+        margin: 0 5px;
+      }
+
+#content.about {
+  margin: 54px 20px;
+  overflow: hidden;
+}
+#content.about #philosophy p strong {
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+#content.about #philosophy {
+  float: left;
+  width: 530px;
+  margin-bottom: 72px;
+}
+  #content.about #philosophy h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  #content.about #philosophy p {
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+#content.about #profile {
+  float: right;
+  width: 312px;
+  margin-top: 10px;
+}
+#content.about #people {
+  float: right;
+  margin-top: 38px;
+  width: 312px;
+}
+  #content.about #people li {
+    list-style-type: none;
+    margin-bottom: 48px;
+    position: relative;
+    padding-left: 24px;
+    display: block;
+  }
+    #content.about #people li a.box {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      left: 0;
+      top: 5px;
+      background-color: #fff;
+    }
+    #content.about #people li h3 {
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 17px;
+    }
+    #content.about #people li h3 a {
+      color: #fff;
+      text-decoration: none;
+      
+    }
+    #content.about #people li span {
+      font-size: 11px;
+      display: block;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+#content.interiors {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1px;
+  text-align: center;
+  width:990px;
+  }
+
+
+#content .interior {
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+#content .interior.last {
+  margin-right: 0;
+}
+#content .interior img:hover {
+  outline: 1px solid #fff;
+  padding: 0;
+}
+
+#content.contact {
+  text-transform: uppercase;
+  width: 100%;
+  margin: 60px 0 0 20px;
+  overflow: hidden;
+  }
+#content #contact-sidebar {
+  line-height: 1.4;
+  margin-top: 20px;
+  padding-bottom: 240px;
+  font-size: 14px;
+  float: left;
+  width: 358px;
+  border-right: 1px solid #222;
+  margin-right: 86px;
+}
+#content #contact-sidebar a {
+  color: #fff;
+  
+}
+#content.contact .thank-you {
+  font-size: 30px;
+  margin-top: 16px;
+}
+#content #contact-form {
+  width: 520px;
+  float: left;
+}
+  #content #contact-form .error {
+    margin-top: 6px;
+    display: block;
+    color: red;
+  }
+  #content #contact-form label {
+    display: block;
+    margin-bottom: 3px;
+  }
+  #content #contact-form form {
+    width: 520px;
+  }
+  #content #contact-form .field {
+    width: 240px;
+    margin-right: 20px;
+    float: left;
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+  #content #contact-form .field .text {
+    font-size: 16px;
+    padding: 6px 5px 5px 5px;
+    font-family: inherit;
+    background-color: #151515;
+    outline: 0;
+    width: 224px;
+    color: #aaa;
+    border: 1px solid #555;
+  }
+  #content #contact-form .field .text:focus {
+    border: 1px solid #999;
+    color: #fff;
+  }
+  #content #contact-form .message.field {
+    width: 540px;
+  }
+  #content #contact-form .message.field textarea {
+    width: 490px;
+    background-color: #151515;
+    outline: 0;
+    color: #aaa;
+    padding: 5px;
+    font-weight: bold;
+    border: 1px solid #555;
+    font-family: inherit;
+    font-size: 14px;
+    height: 120px;
+  }
+  #content #contact-form .message.field textarea:focus {
+    border: 1px solid #999;
+    color: #fff;
+  }
+  #content #contact-form .submit {
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #222;
+    color: #eee;
+    padding: 8px 14px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: none;
+    outline: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+#footer {
+  clear: both;
+  height: 42px;
+  position: relative;
+}
+  #footer #copyright {
+    position: absolute;
+    top: 4px;
+    left: 20px;
+    color: #444;
+    font-size: 11px;
+  }
+  #footer #merchandise-mart {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #eee;
+    margin-top: 16px;
+  }
+  #footer #social-media {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    color: #444;
+    font-size: 11px;
+  }
+
+  #chunks {
+    position:relative;
+    width:300px;
+    height:197px;
+    margin-right: 30px;
+    margin-top:20px;
+    float:left;
+    text-align: left;
+    padding-bottom:20px;
+    background:url('../images/arrow_faded.png') no-repeat 100% 197px;
+  }
+
+    #chunks:hover {
+    background:url('../images/arrow.png') no-repeat 100% 197px;
+    }
+
+    #chunks a:hover img {
+    outline: 1px solid #fff;
+    padding:0px;
+    }
+
+    #chunks_inner {
+    width:300px;
+    height:197px;
+    margin-right: 30px;
+    margin-top:20px;
+    margin-bottom:10px;
+    float:left;
+    text-align: left;
+  }
+
+  #chunks a:hover span {
+      color: #e4ded7; 
+    }
+  #captions {
+    color:gray;
+    margin-left: 5px;
+    font-size: 14px;
+    text-transform:uppercase; 
+    background:url('../images/arrow_faded.png') no-repeat 100% 197px; 
+  }
+  #chunks a {
+    text-decoration: none;
+  }
+  #chunksbottom {
+        width:300px;
+    height:197px;
+    margin-right: 30px;
+    margin-top:20px;
+    float:left;
+    text-align: left;
+    padding-bottom:20px;
+    margin-bottom:10px;
+  }
+   #chunksbottom_home {
+    position: relative;
+        width:300px;
+    height:197px;
+    margin-right: 30px;
+    margin-top:20px;
+    float:left;
+    text-align: left;
+    padding-bottom:20px;
+    margin-bottom:10px;
+    background:url('../images/arrow_faded.png') no-repeat 100% 197px;
+  }
+   #chunksbottom_home:hover {
+    background:url('../images/arrow.png') no-repeat 100% 197px;
+    }
+    #chunksbottom_home a {
+   text-decoration: none; 
+    }
+      #chunksbottom a:hover span {
+      color: #e4ded7; 
+    }
+    #chunksbottom_home a:hover span {
+      color: #e4ded7; 
+    }
+    #arrowlink {
+    position:absolute;
+    width:20px;
+    height:20px;
+    top:197px;
+    left:279px;  
+    }
+
+     #arrowlinkbottom {
+    position:absolute;
+    width:20px;
+    height:20px;
+    left:279px;
+   bottom:0px;
+    }
+

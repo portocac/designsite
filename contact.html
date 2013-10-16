@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="application/xhtml+xml;charset=utf-8" />
+  <meta name="description" content="">
+  <title>Blutter/Shiff Design Associates</title>
+  <link rel="stylesheet" type="text/css" href="./public/css/screen.css" media="screen" />
+  <script src="./public/js/jquery.js" type="text/javascript"></script>
+  <script src="./public/js/jquery.validate.min.js" type="text/javascript"></script>
+  
+  <!-- style definition for label that show validation errors -->
+  <style type="text/css">
+	label.error { float: none; color: red; vertical-align: top; }
+  </style>
+  
+  
+  <script type="text/javascript">   
+
+   $(document).ready(function(){
+      //contact_form validation 
+      //email and message is required, min message length is 20 characters
+     $("#contact_form").validate({
+         rules: {
+             email: {
+             	email:true,
+                required: true
+              },
+              message: {
+                  required: true,
+                  minlength: 20
+              }
+           }
+      });
+      
+      $('#contact_form').submit(function(e) {
+        e.preventDefault();
+
+        var name     = $('#name').attr('value');  
+        var email    = $('#email').attr('value');  
+        var company  = $('#company').attr('value');  
+        var phone    = $('#phone').attr('value');  
+        var subject	 = $('#subject').attr('value');
+        var message  = $('#message').attr('value');
+
+        // If specified form is filled with valid data then do post in send_mail.php
+        if ($("#contact_form").valid()==true)
+        {
+            $.ajax({  
+                type: "POST",  
+                url: "send_mail.php",  
+                data: "name="+ name +"&email="+ email + "&company=" + company + "&phone="+ phone + "&subject="+ subject +"&message="+ message,  
+                success: function(data){ 
+                     alert(data);
+                }  
+            });  
+        return false;  
+        }  
+
+      });
+      
+  });
+  
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22759546-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>
+	
+  <div id="wrapper">
+    <div id="header">
+      <h1><img src="./public/images/logo.png" alt="Blutter/Shiff Design Associates"/></h1>
+      <ul id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="interiors.html">Interiors</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="contact active">Contact</a></li>
+      </ul>
+    </div>
+    <div id="content" class="contact">
+      <div id="contact-sidebar">
+        Blutter Shiff Design Associates<br>
+        222 Merchandise Mart Suite 1648<br>
+        Chicago, IL  60654<br>
+        <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=222+Merchandise+Mart+Suite+1648+Chicago,+IL+60654&sll=37.09024,-95.712891&sspn=55.806079,119.794922&ie=UTF8&hq=&hnear=222+W+Merchandise+Mart+Plaza+%231648,+Chicago,+Cook,+Illinois+60654&z=17">View Map</a>
+        <br><br>
+        t: 312-467-9054<br>        
+        f: 312-467-1901<br><br>
+        <a href="mailto:design@bluttershiff.com">design@bluttershiff.com</a>
+      </div>
+      <div id="contact-form">
+        <form action="send_mail.php" name="contact_form" id="contact_form" method="post">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" class="text" name="name" id="name"/>
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="text" class="text" name="phone" id="phone"/>
+          </div>
+          <div class="field">
+            <label>Email*</label>
+            <input type="text" class="text" name="email" id="email"/>
+          </div>
+          <div class="field">
+            <label>Company</label>
+            <input type="text" class="text" name="company" id="company"/>
+          </div><div class="field"></div><div class="field"></div>
+          <div class="field" style="clear:left; width: 480px">
+            <label>Subject</label>
+            <input type="text" class="text" name="subject" id="subject"/>
+          </div>
+          <div class="message field">
+            <label>Message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+         <div class="field">
+            <input type="submit" class="submit" value="Send" />
+          </div>
+          <div class="field">
+          </div>
+          <div class="field" id="notification" name="notification">
+          </div>
+          
+          
+        </form>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="copyright">Copyright &copy; 2013</div>
+      <div id="merchandise-mart">Located in the Merchandise Mart Chicago</div>
+      <div id="social-media"><span style="position: relative; top: -5px">Follow us:</span>&nbsp;&nbsp;<a href="http://www.facebook.com/pages/Blutter-Shiff-Design-Associates/154137611302575" target="_blank" ><img src="./public/images/fb.png" /></a>&nbsp;&nbsp;<a href="http://twitter.com/bluttershiff" target="_blank"><img src="./public/images/twitter.png" /></a></div>
+    </div>
+  </div>
+</body>
+</html>
